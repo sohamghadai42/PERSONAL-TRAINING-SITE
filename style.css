@@ -41,7 +41,7 @@ body {
 .main-container header {
   display: flex;
   grid-area: header;
-  background-color: #E9ECFF;
+  background-color: #e9ecff;
   border-bottom: 1px solid black;
   position: fixed;
   top: 0;
@@ -82,12 +82,13 @@ body {
 }
 .main-container .heading span {
   font-family: "font-1", sans-serif;
-  font-size: 2.2rem;
+  font-size: 7vw;
   font-weight: 900;
   line-height: 0.9;
 }
 .main-container .heading #font-color {
-  color: #808CFD;
+  margin-left: 5px;
+  color: #808cfd;
 }
 .main-container .image {
   grid-area: image;
@@ -97,7 +98,7 @@ body {
 }
 .main-container .text {
   grid-area: text;
-  background-color: #E9ECFF;
+  background-color: #e9ecff;
   display: flex;
   flex-direction: column;
 }
@@ -129,7 +130,7 @@ body {
   font-size: 1rem;
 }
 .main-container .text .btn:hover {
-  background-color: #808CFD;
+  background-color: #808cfd;
   color: white;
   cursor: pointer;
   box-shadow: -4px -4px 4px 0px #000000;
@@ -144,7 +145,7 @@ body {
 }
 .main-container .first {
   grid-area: first;
-  background-color: #D9E1FF;
+  background-color: #e9ecff;
   border-bottom: 1px solid black;
 }
 .main-container .first h2 {
@@ -157,7 +158,7 @@ body {
 }
 .main-container .second {
   grid-area: second;
-  background-color: #D9E1FF;
+  background-color: #e9ecff;
   border-bottom: 1px solid black;
 }
 .main-container .second h2 {
@@ -204,13 +205,13 @@ body {
 }
 .main-container .sm-line5 {
   grid-area: sm-line5;
-  background-color: #E9ECFF;
+  background-color: #e9ecff;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .main-container .sm-line5 .btn2 {
-  padding: 2.5vh 15.15vw;
+  padding: 1.5rem 5.15rem;
   width: -moz-fit-content;
   width: fit-content;
   background-color: transparent;
@@ -221,14 +222,14 @@ body {
   cursor: pointer;
 }
 .main-container .sm-line5 .btn2:hover {
-  background-color: #808CFD;
+  background-color: #808cfd;
   color: white;
   box-shadow: -4px -4px 4px 0px #000000;
   transition: all 0.3s ease-in-out;
 }
 .main-container .big-spot {
   grid-area: big-spot;
-  background-color: #808CFD;
+  background-color: #808cfd;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -272,7 +273,7 @@ body {
 }
 .main-container .footer-logo {
   grid-area: footer-logo;
-  background-color: #E9ECFF;
+  background-color: #e9ecff;
 }
 .main-container .footer-logo svg {
   height: 40%;
@@ -290,7 +291,7 @@ body {
 }
 .main-container footer {
   grid-area: footer;
-  background-color: #E9ECFF;
+  background-color: #e9ecff;
 }
 .main-container footer .contact {
   margin-top: 3rem;
@@ -347,4 +348,105 @@ body {
   font-size: 0.9rem;
   font-weight: 800;
   line-height: 1.4;
+}
+
+@media (min-width: 900px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 33.5% 33.5% 33%;
+    grid-template-rows: 10% 24% 77% 77% 20% 19% 19% 19% 19% 19% 69% 40% 25%;
+    grid-template-areas: "header header hearder" "heading heading heading" "image image text" "first second image2" "heading2 heading2 heading2" "sm-line1 image3 image3" "sm-line2 image3 image3" "sm-line3 image3 image3" "sm-line4 image3 image3" "sm-line5 image3 image3" "big-spot big-spot big-spot" "footer-logo footer-logo footer-logo" "footer footer footer";
+  }
+  .main-container header nav .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-right: 20px;
+    font-family: "font-2", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .main-container header nav .nav-right a {
+    text-decoration: none;
+    color: black;
+  }
+  .main-container header nav .nav-right #nav-btn {
+    padding: 0.8rem 2.15rem;
+    border-radius: 7px;
+    box-shadow: 4px 4px 2px 0px #000000;
+    font-family: "font-3", sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #808cfd;
+  }
+  .main-container header nav .nav-right #nav-btn:hover {
+    color: white;
+    box-shadow: -4px -4px 4px 0px #000000;
+    transition: all 0.3s ease-in-out;
+    box-shadow: none;
+    background-color: black;
+  }
+  .main-container .heading .text-section {
+    width: 100%;
+  }
+  .main-container .heading .text-section span {
+    letter-spacing: -4px;
+    font-size: 7rem;
+  }
+  .main-container #font-color {
+    margin-left: 20px;
+  }
+  .main-container #text-1 h2 {
+    font-size: 3vw;
+  }
+  .main-container #text-1 p {
+    margin-top: 20vw;
+  }
+  .main-container #text-2 h2 {
+    font-size: 3vw;
+  }
+  .main-container #text-2 p {
+    margin-top: 20vw;
+    font-size: 1rem;
+    width: 70%;
+  }
+  .main-container .first {
+    border-right: 1px solid black;
+  }
+  .main-container #text-3 h2 {
+    margin-top: 1.6rem;
+    font-size: 2.8rem;
+    line-height: 1;
+  }
+  .main-container #text-4 {
+    display: flex;
+    justify-content: center;
+  }
+  .main-container #text-4 h2 {
+    font-size: 1.55rem;
+  }
+  .main-container #text-4 p {
+    font-size: 1rem;
+  }
+  .main-container .footer-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .main-container .footer-logo h1 {
+    letter-spacing: -3px;
+    margin-top: 35px;
+    margin-right: 10px;
+    font-size: 3rem;
+  }
+  .main-container .footer-logo svg {
+    margin-top: 20px;
+  }
+  .main-container footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main-container footer .social {
+    margin-right: 30px;
+  }
 }/*# sourceMappingURL=style.css.map */
