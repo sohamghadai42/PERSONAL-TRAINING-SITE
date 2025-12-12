@@ -126,27 +126,27 @@ body {
     background-size: cover;
     background-position: center;
   }
-  @mixin text-h2{
-      font-family: "font-1", sans-serif;
-      font-size: 1.7rem;
-      font-weight: 700;
-      margin-left: 18px;
-      margin-top: 15px;
-      letter-spacing: -1px;
-      width: 60%;
-      line-height: 1;
-      text-transform: uppercase;
-      margin-bottom: 8%;
+  @mixin text-h2 {
+    font-family: "font-1", sans-serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-left: 18px;
+    margin-top: 15px;
+    letter-spacing: -1px;
+    width: 60%;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 8%;
   }
-  @mixin para{
-      font-family: "font-5", sans-serif;
-      font-size: 0.9rem;
-      font-weight: 500;
-      margin-left: 18px;
-      width: 90%;
-      line-height: 1.4;
+  @mixin para {
+    font-family: "font-5", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-left: 18px;
+    width: 90%;
+    line-height: 1.4;
   }
-  .text-about-1{
+  .text-about-1 {
     grid-area: text-about-1;
     background-color: #808cfd;
     display: flex;
@@ -155,7 +155,7 @@ body {
     h2 {
       @include text-h2();
     }
-    h4{
+    h4 {
       font-family: "font-1", sans-serif;
       font-size: 1.4rem;
       font-weight: 700;
@@ -163,7 +163,7 @@ body {
       margin-top: 15px;
       letter-spacing: -1px;
       width: 60%;
-      line-height: 1;  
+      line-height: 1;
       margin-bottom: 1.5%;
     }
     p {
@@ -177,19 +177,18 @@ body {
     background-size: cover;
     background-position: center;
   }
-  .text-about-2{
+  .text-about-2 {
     grid-area: text-about-2;
     background-color: #e9ecff;
 
-    h2{
-        @include text-h2();
-        width: 37%;
+    h2 {
+      @include text-h2();
+      width: 37%;
     }
-    p{
-        @include para();
+    p {
+      @include para();
     }
   }
-
 
   .image-about-3 {
     grid-area: image-about-3;
@@ -200,16 +199,16 @@ body {
     align-items: flex-end;
     justify-content: center;
 
-    .text-image{
-        h2{
-            @include text-h2();
-            color: white;
-            width: 80%;
-        }
+    .text-image {
+      h2 {
+        @include text-h2();
+        color: white;
+        width: 80%;
+      }
     }
   }
 
-  .big-spot{
+  .big-spot {
     grid-area: big-spot;
     background-color: #e9ecff;
     display: flex;
@@ -218,7 +217,7 @@ body {
     align-items: center;
     border-bottom: 1px solid black;
 
-    p{
+    p {
       font-family: "font-5", sans-serif;
       font-size: 1rem;
       color: black;
@@ -226,14 +225,14 @@ body {
       text-align: center;
       margin-bottom: 0.8rem;
     }
-    h2{
+    h2 {
       font-family: "font-1", sans-serif;
       font-size: 2.65rem;
       font-weight: 700;
       color: black;
       margin-bottom: 10px;
       text-align: center;
-      letter-spacing: -2px
+      letter-spacing: -2px;
     }
     .btn3 {
       @include button;
@@ -245,7 +244,7 @@ body {
       background-color: #808cfd;
     }
   }
-  .footer-logo{
+  .footer-logo {
     grid-area: footer-logo;
     background-color: #e9ecff;
 
@@ -266,7 +265,7 @@ body {
     }
   }
 
-  footer{
+  footer {
     grid-area: footer;
     background-color: #e9ecff;
 
@@ -328,6 +327,139 @@ body {
         font-size: 0.9rem;
         font-weight: 800;
         line-height: 1.4;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 900px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 67% 33%;
+    grid-template-rows: 10% 24% 80% 77% 77% 69% 40% 25%;
+    grid-template-areas:
+      "header header"
+      "heading heading"
+      "text-about-1 image-about-1"
+      "image-about-2 text-about-2"
+      "image-about-3 image-about-3"
+      "big-spot big-spot"
+      "footer-logo footer-logo"
+      "footer footer";
+    header {
+      nav {
+        .nav-right {
+          display: flex;
+          align-items: center;
+          gap: 25px;
+          margin-right: 20px;
+          font-family: "font-2", sans-serif;
+          font-size: 1rem;
+          font-weight: 600;
+
+          a {
+            text-decoration: none;
+            color: #000000;
+          }
+          a:hover {
+            color: gray;
+          }
+          #nav-btn {
+            padding: 0.8rem 2.15rem;
+            // width: fit-content;
+            border-radius: 7px;
+            box-shadow: 4px 4px 2px 0px #000000;
+            font-family: "font-3", sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+            background-color: #808cfd;
+          }
+          #nav-btn:hover {
+            @include button-hover;
+            box-shadow: none;
+            background-color: black;
+          }
+        }
+      }
+    }
+
+    .heading{
+      letter-spacing: -7px;
+
+      span{
+        font-size: 7.7vw;
+      }
+    }
+
+    .text-about-1{
+      display: flex;
+      flex-direction: column;
+
+      h2{
+        font-size: 2.8rem;
+        margin-top: 2%;
+      }
+
+      h4{
+        margin-top: 25%;
+      }
+      p{
+        font-size: 1rem;
+      }
+    }
+
+    .text-about-2{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      
+      h2{
+        margin-top: 5%;
+        width: 60%;
+        font-size: 2.8rem;
+      }
+      p{
+        font-size: 0.97rem;
+        margin-bottom: 5%;
+        margin-left: 4.5%;
+        font-weight: 400;
+      }
+    }
+
+    .image-about-3{
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      .text-image{
+        margin-bottom: -7%;
+      h2{
+        width: 39%;
+        font-size: 2.8rem;
+        letter-spacing: -1px;
+        }
+      }
+    }
+
+    .footer-logo{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      h1{
+        letter-spacing: -3px;
+        margin-top: 35px;
+        margin-right: 10px;
+        font-size: 3rem;
+      }
+      svg{
+        margin-top: 20px;
+      }
+    }
+    footer{
+      display: flex;
+      justify-content: space-between;
+      .social{
+        margin-right: 30px;
       }
     }
   }

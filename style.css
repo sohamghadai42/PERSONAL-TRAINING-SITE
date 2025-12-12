@@ -370,6 +370,9 @@ body {
     text-decoration: none;
     color: black;
   }
+  .main-container header nav .nav-right a:hover {
+    color: gray;
+  }
   .main-container header nav .nav-right #nav-btn {
     padding: 0.8rem 2.15rem;
     border-radius: 7px;

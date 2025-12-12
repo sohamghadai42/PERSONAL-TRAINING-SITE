@@ -1,0 +1,53 @@
+@font-face {
+  font-family: font-1;
+  src: url(./AnekTamil_wdth_wght__1-english.woff2);
+}
+@font-face {
+  font-family: font-2;
+  src: url(./Geist-VariableFont_wght_1-english.woff2);
+}
+@font-face {
+  font-family: font-3;
+  src: url(./GeistMono-VariableFont_wght_1-english.woff2);
+}
+@font-face {
+  font-family: font-4;
+  src: url(./InstrumentSans_wdth_wght__1-english.woff2);
+}
+@font-face {
+  font-family: font-5;
+  src: url(./Poppins-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+@mixin button {
+  padding: 0.8rem 5.15rem;
+  width: fit-content;
+  border-radius: 7px;
+  box-shadow: 4px 4px 2px 0px #000000;
+  font-family: "font-3", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+}
+@mixin button-hover {
+  color: white;
+  box-shadow: -4px -4px 4px 0px #000000;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-container{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10%;
+    grid-template-areas: "header";
+}
