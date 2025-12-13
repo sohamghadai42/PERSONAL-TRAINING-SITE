@@ -1,22 +1,22 @@
 @font-face {
   font-family: font-1;
-  src: url(./AnekTamil_wdth_wght__1-english.woff2);
+  src: url(/fonts/AnekTamil_wdth_wght__1-english.woff2);
 }
 @font-face {
   font-family: font-2;
-  src: url(./Geist-VariableFont_wght_1-english.woff2);
+  src: url(/fonts/Geist-VariableFont_wght_1-english.woff2);
 }
 @font-face {
   font-family: font-3;
-  src: url(./GeistMono-VariableFont_wght_1-english.woff2);
+  src: url(/fonts/GeistMono-VariableFont_wght_1-english.woff2);
 }
 @font-face {
   font-family: font-4;
-  src: url(./InstrumentSans_wdth_wght__1-english.woff2);
+  src: url(/fonts/InstrumentSans_wdth_wght__1-english.woff2);
 }
 @font-face {
   font-family: font-5;
-  src: url(./Poppins-Regular.ttf);
+  src: url(/fonts/Poppins-Regular.ttf);
 }
 * {
   margin: 0;
@@ -127,7 +127,7 @@ body {
   }
   .image {
     grid-area: image;
-    background-image: url(./fa185f92457c01f4c2ab992f16dab02624634ed7.avif);
+    background-image: url(/assets/fa185f92457c01f4c2ab992f16dab02624634ed7.avif);
     background-position: center;
     background-size: cover;
   }
@@ -176,7 +176,7 @@ body {
 .main-container {
   .image2 {
     grid-area: image2;
-    background-image: url(./4b3ae65ece4bb9cc6a2f518907d80df4631625fe.avif);
+    background-image: url(/assets/4b3ae65ece4bb9cc6a2f518907d80df4631625fe.avif);
     background-position: center;
     background-size: cover;
   }
@@ -216,7 +216,7 @@ body {
 
   .image3 {
     grid-area: image3;
-    background-image: url(./c695b3171f8fc21be9574c7eeb04e5365a7dd496.avif);
+    background-image: url(/assets/c695b3171f8fc21be9574c7eeb04e5365a7dd496.avif);
     background-position: center;
     background-size: cover;
   }
@@ -261,6 +261,9 @@ body {
       width: fit-content;
       background-color: transparent;
       border-radius: 7px;
+      border: 1px solid black;
+      text-decoration: none;
+      color: black;
       box-shadow: 4px 4px 2px 0px #000000;
       font-family: "font-3", sans-serif;
       font-size: 1rem;
@@ -301,6 +304,7 @@ body {
     }
     .btn3 {
       @include button;
+      text-decoration: none;
       background-color: white;
       color: black;
     }

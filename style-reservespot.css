@@ -1,22 +1,22 @@
 @font-face {
   font-family: font-1;
-  src: url(./AnekTamil_wdth_wght__1-english.woff2);
+  src: url(/fonts/AnekTamil_wdth_wght__1-english.woff2);
 }
 @font-face {
   font-family: font-2;
-  src: url(./Geist-VariableFont_wght_1-english.woff2);
+  src: url(/fonts/Geist-VariableFont_wght_1-english.woff2);
 }
 @font-face {
   font-family: font-3;
-  src: url(./GeistMono-VariableFont_wght_1-english.woff2);
+  src: url(/fonts/GeistMono-VariableFont_wght_1-english.woff2);
 }
 @font-face {
   font-family: font-4;
-  src: url(./InstrumentSans_wdth_wght__1-english.woff2);
+  src: url(/fonts/InstrumentSans_wdth_wght__1-english.woff2);
 }
 @font-face {
   font-family: font-5;
-  src: url(./Poppins-Regular.ttf);
+  src: url(/fonts/Poppins-Regular.ttf);
 }
 * {
   margin: 0;
@@ -420,7 +420,7 @@ body {
     background-color: black;
   }
   .main-container .third-card #btn {
-    margin-top: 32.3%;
+    margin-top: 32.8%;
   }
   .main-container .big-spot p {
     width: 60%;
@@ -461,6 +461,6 @@ body {
     border-right: 1px solid black;
   }
   .second-card #btn {
-    margin-top: 21%;
+    margin-top: 21.3%;
   }
 }/*# sourceMappingURL=style-reservespot.css.map */
