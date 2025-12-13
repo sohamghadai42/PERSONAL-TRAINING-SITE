@@ -29,6 +29,7 @@ body {
   width: 100%;
 }
 @mixin button {
+  background-color: #808cfd;
   padding: 0.8rem 5.15rem;
   width: fit-content;
   border-radius: 7px;
@@ -36,18 +37,379 @@ body {
   font-family: "font-3", sans-serif;
   font-size: 1rem;
   cursor: pointer;
+  background-color: #808cfd;
+  color: black;
+  margin-left: 13%;
 }
 @mixin button-hover {
   color: white;
-  box-shadow: -4px -4px 4px 0px #000000;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  background-color: black;
+  box-shadow: none;
+}
+@mixin cards {
+  display: flex;
+  flex-direction: column;
+  background-color: #e9ecff;
+  border-bottom: 1px solid black;
+
+  h3 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-top: 3%;
+    margin-left: 4%;
+    margin-bottom: 15%;
+    font-family: font-1;
+  }
+  span {
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin-top: 8%;
+    margin-left: 3.5%;
+    text-align: start;
+    border-bottom: 1px solid black;
+    font-family: font-4;
+    width: 90%;
+  }
+  .diff-span {
+    border: none;
+    margin-top: 6%;
+    margin-bottom: 20px;
+    width: 90%;
+    font-weight: 450;
+  }
+  #btn {
+    @include button;
+  }
+  #btn:hover {
+    @include button-hover;
+  }
 }
 
-.main-container{
-    height: 100%;
+.main-container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 11% 10% 65% 67% 63% 62% 50% 1fr;
+  grid-template-areas:
+    "header"
+    "heading"
+    "first-card"
+    "second-card"
+    "third-card"
+    "big-spot"
+    "footer-logo"
+    "footer";
+
+  header {
+    display: flex;
+    background-color: #e9ecff;
+    border-bottom: 1px solid black;
+    position: fixed;
+    top: 0;
     width: 100%;
+    height: 11%;
+    grid-area: header;
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      .nav-left {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 1.3rem;
+        font-weight: 700;
+        font-family: font-1;
+        margin-left: 20px;
+
+        svg {
+          height: 27px;
+          width: auto;
+        }
+      }
+      .nav-right {
+        display: none;
+      }
+    }
+  }
+
+  .heading {
+    display: flex;
+    align-items: center;
+    grid-area: heading;
+    border-bottom: 1px solid black;
+
+    .text-section {
+      margin-left: 4%;
+      width: 80%;
+    }
+
+    span {
+      font-family: "font-1", sans-serif;
+      font-size: 2.15rem;
+      font-weight: 900;
+      line-height: 0.9;
+    }
+    #font-color {
+      margin-left: 5px;
+      color: #808cfd;
+    }
+  }
+
+  .first-card {
+    grid-area: first-card;
+    @include cards();
+  }
+
+  .second-card {
+    @include cards();
+    grid-area: second-card;
+  }
+
+  .third-card {
+    @include cards();
+    grid-area: third-card;
+    #btn {
+      margin-top: 5%;
+    }
+  }
+
+  .big-spot {
+    grid-area: big-spot;
+    background-color: #808cfd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+
+    p {
+      font-family: "font-5", sans-serif;
+      font-size: 0.8rem;
+      color: black;
+      width: 90%;
+      text-align: center;
+      margin-bottom: 0.8rem;
+    }
+    h2 {
+      font-family: "font-1", sans-serif;
+      font-size: 2.65rem;
+      font-weight: 700;
+      color: black;
+      margin-bottom: 10px;
+      text-align: center;
+      letter-spacing: -2px;
+    }
+    .btn3 {
+      @include button;
+      background-color: white;
+      color: black;
+      margin-left: 0%;
+    }
+    .btn3:hover {
+      @include button-hover;
+      background-color: black;
+      box-shadow: none;
+    }
+  }
+  .footer-logo {
+    grid-area: footer-logo;
+    background-color: #e9ecff;
+
+    svg {
+      height: 40%;
+      width: auto;
+      margin-top: 8%;
+      margin-left: 1.3rem;
+      margin-bottom: 1.6rem;
+    }
+    h1 {
+      font-family: "font-1", sans-serif;
+      font-size: 9vw;
+      font-weight: 700;
+      margin-left: 1.2rem;
+      margin-top: 0.5rem;
+    }
+  }
+
+  footer {
+    grid-area: footer;
+    background-color: #e9ecff;
+
+    .contact {
+      margin-top: 3rem;
+      margin-left: 1.3rem;
+
+      h3 {
+        font-family: "font-1", sans-serif;
+        font-size: 1.45rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        font-family: "font-5", sans-serif;
+        font-size: 0.9rem;
+        font-weight: 700;
+        line-height: 1.4;
+      }
+    }
+    .timing {
+      margin-left: 1.3rem;
+      margin-top: 2.5rem;
+
+      h3 {
+        font-family: "font-1", sans-serif;
+        font-size: 1.45rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        font-family: "font-2", sans-serif;
+        font-size: 0.9rem;
+        font-weight: 700;
+        line-height: 1.4;
+      }
+
+      .timing-hours {
+        display: flex;
+        gap: 3.5rem;
+      }
+    }
+    .social {
+      margin-left: 1.3rem;
+      margin-top: 2.5rem;
+      margin-bottom: 3rem;
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        font-family: "font-1", sans-serif;
+        font-size: 1.45rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+      }
+      a {
+        color: black;
+        font-family: "font-4", sans-serif;
+        font-size: 0.9rem;
+        font-weight: 800;
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .main-container {
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 10%;
-    grid-template-areas: "header";
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 11% 20% 80% 62% 50% 1fr;
+    grid-template-areas:
+      "header header header"
+      "heading heading heading"
+      "first-card second-card third-card"
+      "big-spot big-spot big-spot"
+      "footer-logo footer-logo footer-logo"
+      "footer footer footer";
+
+
+      header {
+      nav {
+        .nav-right {
+          display: flex;
+          align-items: center;
+          gap: 25px;
+          margin-right: 20px;
+          font-family: "font-2", sans-serif;
+          font-size: 1rem;
+          font-weight: 600;
+
+          a {
+            text-decoration: none;
+            color: black;
+          }
+          a:hover{
+            color: gray;
+          }
+          #nav-btn {
+            padding: 0.8rem 2.15rem;
+            // width: fit-content;
+            border-radius: 7px;
+            box-shadow: 4px 4px 2px 0px #000000;
+            font-family: "font-3", sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+            background-color: #808cfd;
+          }
+            #nav-btn:hover {
+                @include button-hover;
+                box-shadow: none;
+                background-color: black
+            }
+        }
+      }
+    }
+
+    .third-card {
+      #btn {
+        margin-top: 32.3%;
+      }
+    }
+    .big-spot{
+      p{
+        width: 60%;
+        font-size: 1rem;
+      }
+    }
+
+    .footer-logo{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      h1{
+        letter-spacing: -3px;
+        margin-top: 35px;
+        margin-right: 10px;
+        font-size: 3rem;
+      }
+      svg{
+        margin-top: 20px;
+      }
+    }
+
+    footer{
+       display: flex;
+      justify-content: space-between;
+      .social{
+        margin-right: 30px;
+      }
+    }
+  }
+
+  .heading {
+    .text-section {
+      span {
+        font-size: 7rem;
+        margin-left: -3%;
+      }
+    }
+  }
+  .first-card {
+    border-right: 1px solid black;
+    #btn {
+      margin-top: 25%;
+    }
+  }
+  .second-card {
+    border-right: 1px solid black;
+    #btn {
+      margin-top: 21%;
+    }
+  }
+
 }
